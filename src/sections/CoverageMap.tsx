@@ -10,28 +10,29 @@ export function CoverageMap({ language }: CoverageMapProps) {
   const content = translations[language].coverageMap;
 
   return (
-    <section className="bg-brand.gray py-14 md:py-20">
-      <div className="mx-auto grid max-w-[1280px] items-center gap-8 px-4 md:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-        <div>
-          <p className="mb-4 text-sm font-extrabold uppercase tracking-[0.28em] text-brand.black/65">
-            Kazakhstan coverage
-          </p>
-          <h2 className="max-w-[12ch] text-4xl font-black uppercase leading-[0.96] tracking-[-0.05em] text-brand.black md:text-5xl">
+    <section className="bg-white py-14 md:py-20">
+      <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-4 md:px-6 lg:grid-cols-[0.75fr_1.4fr_0.85fr] lg:gap-6 lg:px-8">
+        <div className="lg:pb-8">
+          <h2 className="max-w-[10ch] text-4xl font-black uppercase leading-[0.94] tracking-[-0.06em] text-brand.black md:text-5xl lg:text-[3.7rem]">
             {content.title}
           </h2>
-          <p className="mt-5 max-w-[34rem] text-base font-medium leading-7 text-black/70 md:text-lg">
-            {content.subtitle}
-          </p>
         </div>
 
-        <div className="rounded-[28px] border border-black/5 bg-white p-4 shadow-[0_18px_40px_rgba(17,17,17,0.08)] md:p-6">
+        <div className="flex items-center justify-center">
           <img
             src={coverageMapImage}
             alt="Карта покрытия по Казахстану"
-            className="h-full w-full object-contain"
+            className="h-auto w-full max-w-[780px] object-contain"
             loading="lazy"
             decoding="async"
           />
+        </div>
+
+        <div className="flex items-start gap-4 lg:justify-self-end lg:pt-4">
+          <span className="mt-3 h-1 w-10 shrink-0 rounded-full bg-brand.yellow" />
+          <p className="max-w-[18rem] text-lg font-medium leading-7 text-black/70 md:text-xl">
+            {content.subtitle}
+          </p>
         </div>
       </div>
     </section>
