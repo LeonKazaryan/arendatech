@@ -25,6 +25,10 @@ export const translations = {
       title: 'РАБОТАЕМ ПО ВСЕМУ КАЗАХСТАНУ',
       subtitle: 'Организуем подачу техники по всей стране.',
     },
+    equipment: {
+      title: 'НАША ТЕХНИКА',
+      cta: 'УЗНАТЬ СТОИМОСТЬ',
+    },
   },
   kz: {
     header: {
@@ -47,6 +51,10 @@ export const translations = {
     coverageMap: {
       title: 'ҚАЗАҚСТАН БОЙЫНША ЖҰМЫС ІСТЕЙМІЗ',
       subtitle: 'Техниканы бүкіл ел бойынша жеткіземіз.',
+    },
+    equipment: {
+      title: 'БІЗДІҢ ТЕХНИКА',
+      cta: 'БАҒАСЫН БІЛУ',
     },
   },
 } as const;

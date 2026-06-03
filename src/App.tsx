@@ -3,6 +3,7 @@ import type { Language } from './data/siteContent';
 import { Header } from './sections/Header';
 import { Hero } from './sections/Hero';
 import { CoverageMap } from './sections/CoverageMap';
+import { EquipmentCatalog } from './sections/EquipmentCatalog';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('ru');
@@ -13,6 +14,7 @@ export default function App() {
       <main>
         <Hero language={language} />
         <CoverageMap language={language} />
+        <EquipmentCatalog language={language} />
       </main>
     </div>
   );

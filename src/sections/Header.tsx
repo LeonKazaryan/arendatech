@@ -1,4 +1,5 @@
-import { Phone, MessageCircleMore } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa6';
 import type { Language } from '../data/siteContent';
 import { translations } from '../data/siteContent';
 import { ActionButton } from '../components/ActionButton';
@@ -31,8 +32,8 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
 
         <div className="grid w-full grid-cols-3 gap-2 sm:flex sm:w-auto sm:items-center md:gap-3">
           <LanguageSwitch value={language} onChange={onLanguageChange} />
-          <ActionButton icon={MessageCircleMore} label={content.whatsapp} tone="success" className="h-11 px-3 text-[12px] sm:h-14 sm:min-w-[140px] sm:px-5 sm:text-[15px]" />
-          <ActionButton icon={Phone} label={content.call} tone="warning" className="h-11 px-3 text-[12px] sm:h-14 sm:min-w-[140px] sm:px-5 sm:text-[15px]" />
+          <ActionButton icon={<FaWhatsapp className="h-4 w-4 text-white" />} label={content.whatsapp} tone="success" className="h-11 px-3 text-[12px] sm:h-14 sm:min-w-[140px] sm:px-5 sm:text-[15px]" />
+          <ActionButton icon={<Phone size={18} strokeWidth={2.4} className="text-brand.black" />} label={content.call} tone="warning" className="h-11 px-3 text-[12px] sm:h-14 sm:min-w-[140px] sm:px-5 sm:text-[15px]" />
         </div>
       </div>
     </header>
