@@ -1,0 +1,63 @@
+import { CheckCircle2, Phone, MessageCircleMore } from 'lucide-react';
+import bannerImage from '../assets/images/banner.jpeg';
+import type { Language } from '../data/siteContent';
+import { translations } from '../data/siteContent';
+import { ActionButton } from '../components/ActionButton';
+
+type HeroProps = {
+  language: Language;
+};
+
+export function Hero({ language }: HeroProps) {
+  const content = translations[language].hero;
+
+  return (
+    <section className="relative overflow-hidden bg-brand-gray">
+      <div className="absolute inset-0">
+        <img
+          src={bannerImage}
+          alt="Дорожная спецтехника на объекте"
+          className="h-full w-full object-cover object-right md:object-center"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 via-42% to-white/18 lg:via-white/75 lg:to-white/10" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.22))]" />
+      </div>
+
+      <div className="relative mx-auto flex min-h-[calc(100vh-88px)] max-w-[1280px] items-center px-4 py-10 md:px-6 md:py-14 lg:px-8 lg:py-20">
+        <div className="max-w-[680px] rounded-[28px] bg-white/35 px-4 py-5 backdrop-blur-[2px] md:bg-transparent md:px-0 md:py-0">
+          <p className="mb-4 text-sm font-extrabold uppercase tracking-[0.32em] text-brand-yellow md:text-base">
+            {content.eyebrow}
+          </p>
+          <h1 className="max-w-[12ch] text-5xl font-black uppercase leading-[0.88] tracking-[-0.06em] text-brand-black md:text-6xl lg:text-[5.5rem]">
+            <span className="block">{content.titleTop}</span>
+            <span className="block text-brand-yellow">{content.titleBottom}</span>
+          </h1>
+          <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xl font-black uppercase leading-none tracking-[-0.04em] text-brand-black md:text-2xl">
+            <span>{content.subtitleLine}</span>
+            <span>•</span>
+            <span>{content.subtitleAccent}</span>
+          </p>
+          <p className="mt-5 max-w-[28rem] text-base font-semibold leading-7 text-black/75 md:text-lg">
+            {content.subtitle}
+          </p>
+
+          <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+            <ActionButton icon={MessageCircleMore} label={content.whatsapp} tone="success" className="h-14 sm:min-w-[180px]" />
+            <ActionButton icon={Phone} label={content.call} tone="warning" className="h-14 sm:min-w-[180px]" />
+          </div>
+
+          <ul className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3">
+            {content.features.map((feature) => (
+              <li key={feature} className="flex shrink-0 items-center gap-2 whitespace-nowrap text-sm font-medium text-black/68">
+                <CheckCircle2 size={18} strokeWidth={2.3} className="shrink-0 text-brand-yellow" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
