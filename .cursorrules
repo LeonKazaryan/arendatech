@@ -1,0 +1,402 @@
+# ROAD CONSTRUCTION LANDING - CURSOR RULES
+
+## Project Overview
+
+Create a modern, responsive, single-page landing website for a road construction equipment rental company in Kazakhstan.
+
+No backend.
+No database.
+No authentication.
+No CMS.
+
+Frontend only.
+
+Main goal:
+Convert visitors into WhatsApp messages and phone calls.
+
+---
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React Icons
+
+Use modern React practices.
+
+---
+
+## Project Structure
+
+src/
+├── assets/
+│   ├── images/
+│   └── icons/
+├── components/
+├── sections/
+├── data/
+├── hooks/
+├── types/
+├── utils/
+├── App.tsx
+└── main.tsx
+
+Keep components reusable and modular.
+
+---
+
+## Design Requirements
+
+Style inspiration:
+
+- Caterpillar (CAT)
+- Komatsu
+- Volvo Construction Equipment
+
+Visual style:
+
+- Industrial
+- Clean
+- Modern
+- Professional
+
+Avoid:
+
+- Corporate stock website style
+- Fancy animations
+- Glassmorphism
+- Neumorphism
+- Complex gradients
+
+---
+
+## Color Palette
+
+Primary Yellow:
+#F2C200
+
+Black:
+#111111
+
+White:
+#FFFFFF
+
+Light Gray:
+#F5F5F5
+
+Success Green:
+#25D366
+
+Color distribution:
+
+- White 40%
+- Yellow 35%
+- Black 25%
+
+Website should feel bright and open.
+
+---
+
+## Typography
+
+Font Family:
+
+Montserrat
+
+Fallback:
+
+sans-serif
+
+Headings:
+
+- font-weight: 800
+- uppercase
+- tight spacing
+
+Body:
+
+- font-weight: 400-500
+
+Avoid decorative fonts.
+
+---
+
+## Layout Rules
+
+Desktop-first design.
+
+Maximum content width:
+
+1280px
+
+Container:
+
+mx-auto px-4 md:px-6 lg:px-8
+
+Section spacing:
+
+py-20 desktop
+py-14 mobile
+
+Use consistent spacing everywhere.
+
+Avoid random margins.
+
+---
+
+## Landing Sections Order
+
+1. Header
+2. Hero
+3. Kazakhstan Coverage Map
+4. Equipment Catalog
+5. Why Choose Us
+6. How We Work
+7. Projects Gallery
+8. Contact CTA
+9. Footer
+
+Do not add extra sections.
+
+---
+
+## Header
+
+Sticky header.
+
+Contains:
+
+- Logo
+- Language switch (RU / KZ)
+- WhatsApp button
+- Call button
+
+Header should remain visible during scrolling.
+
+---
+
+## Hero Section
+
+Main conversion section.
+
+Requirements:
+
+- Large equipment image
+- Bright blue sky
+- Daylight scene
+- Large bold heading
+- Short supporting text
+
+Buttons:
+
+- WhatsApp
+- Call
+
+Buttons must be equal size.
+
+Hero occupies most of first screen.
+
+---
+
+## Equipment Section
+
+Cards:
+
+- Катки
+- Асфальтоукладчики
+- Экскаваторы
+- Грейдеры
+- Самосвалы
+- Погрузчики
+- Тралы
+
+Each card:
+
+- Image
+- Title
+- CTA button
+
+No prices.
+
+No descriptions.
+
+---
+
+## Why Choose Us
+
+Dark section.
+
+Black background.
+
+Yellow icons.
+
+6 advantages only.
+
+Simple grid layout.
+
+---
+
+## How We Work
+
+4-step horizontal process.
+
+1. Заявка
+2. Подбор техники
+3. Согласование
+4. Выезд техники
+
+Keep extremely simple.
+
+---
+
+## Gallery
+
+Grid layout.
+
+Real project photos.
+
+No lightbox.
+
+No sliders.
+
+No carousels.
+
+---
+
+## Contact Section
+
+Most important section after Hero.
+
+Large heading.
+
+WhatsApp CTA.
+
+Call CTA.
+
+Address.
+
+Email.
+
+Phone.
+
+---
+
+## Footer
+
+Contains:
+
+- Logo
+- Copyright
+- PDF Commercial Offer link
+- Language switch
+
+Minimal design.
+
+---
+
+## Images
+
+All images stored inside:
+
+src/assets/images
+
+Never hardcode image URLs.
+
+Import images properly.
+
+Use descriptive filenames.
+
+---
+
+## Data Management
+
+Do not hardcode repeated content.
+
+Store:
+
+- Equipment list
+- Contact information
+- Benefits
+- Process steps
+
+inside src/data
+
+Render through mapping.
+
+---
+
+## Code Quality
+
+Always:
+
+- Use TypeScript types
+- Create reusable components
+- Avoid duplicated code
+- Keep files small
+- Use semantic HTML
+
+Never:
+
+- Use inline styles
+- Hardcode repeated values
+- Create giant components
+- Use any type
+
+---
+
+## Responsiveness
+
+Must work perfectly on:
+
+- Mobile
+- Tablet
+- Desktop
+
+Mobile experience is critical.
+
+All sections must stack properly.
+
+No horizontal scrolling.
+
+---
+
+## Performance
+
+Optimize images.
+
+Use lazy loading where appropriate.
+
+Keep bundle small.
+
+Avoid unnecessary dependencies.
+
+---
+
+## Animations
+
+Minimal only.
+
+Allowed:
+
+- Hover effects
+- Fade-in
+- Small transitions
+
+Avoid:
+
+- Heavy motion
+- Parallax
+- Complex scroll animations
+
+---
+
+## Main Business Goal
+
+Every design decision should increase the chance that a visitor:
+
+1. Clicks WhatsApp
+2. Calls the company
+
+Everything else is secondary.
