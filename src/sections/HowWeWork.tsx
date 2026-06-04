@@ -27,7 +27,7 @@ export function HowWeWork({ language }: HowWeWorkProps) {
           {content.title}
         </h2>
 
-        <div className="relative mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+        <div className="relative mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
           {processSteps.map((step, index) => {
             const iconSrc = stepIcons[step.id];
 
@@ -45,19 +45,19 @@ export function HowWeWork({ language }: HowWeWorkProps) {
                   </div>
                 ) : null}
 
-                <article className="relative flex h-full min-h-[240px] flex-col items-center rounded-[22px] bg-[#F7F7F7] px-5 pb-7 pt-7 text-center shadow-[0_10px_24px_rgba(17,17,17,0.06)] ring-1 ring-black/5 sm:min-h-[250px]">
-                  <div className="absolute left-4 top-4 flex h-14 w-14 items-center justify-center rounded-[10px] bg-brand-yellow text-brand-black shadow-[0_2px_0_rgba(0,0,0,0.1)]">
-                    <span className="text-[24px] font-black leading-none">{step.number}</span>
+                <article className="relative flex h-full min-h-[228px] flex-col items-center rounded-[20px] bg-[#F7F7F7] px-3 pb-5 pt-5 text-center shadow-[0_10px_24px_rgba(17,17,17,0.06)] ring-1 ring-black/5 sm:min-h-[290px] sm:px-5 sm:pb-7 sm:pt-7">
+                  <div className="absolute left-3 top-3 flex h-11 w-11 items-center justify-center rounded-[10px] bg-brand-yellow text-brand-black shadow-[0_2px_0_rgba(0,0,0,0.1)] sm:left-4 sm:top-4 sm:h-14 sm:w-14">
+                    <span className="text-[20px] font-black leading-none sm:text-[24px]">{step.number}</span>
                   </div>
 
                   <img
                     src={iconSrc}
                     alt=""
                     aria-hidden="true"
-                    className="mt-4 h-40 w-40 object-contain sm:h-44 sm:w-44 md:h-48 md:w-48"
+                    className="mt-6 h-32 w-32 object-contain sm:mt-5 sm:h-52 sm:w-52 md:h-56 md:w-56"
                   />
 
-                  <p className="mt-4 max-w-[12rem] text-[15px] font-extrabold uppercase leading-6 tracking-[-0.02em] text-brand.black sm:text-base">
+                  <p className="mt-4 max-w-[9rem] text-[12px] font-extrabold uppercase leading-4 tracking-[-0.02em] text-brand.black sm:max-w-[12rem] sm:text-base sm:leading-6">
                     {language === 'ru' ? step.ruLabel : step.kzLabel}
                   </p>
                 </article>
