@@ -29,6 +29,12 @@ export const translations = {
       title: 'НАША ТЕХНИКА',
       cta: 'УЗНАТЬ СТОИМОСТЬ',
     },
+    benefits: {
+      title: 'ПОЧЕМУ ВЫБИРАЮТ НАС',
+    },
+    process: {
+      title: 'КАК МЫ РАБОТАЕМ',
+    },
   },
   kz: {
     header: {
@@ -55,6 +61,12 @@ export const translations = {
     equipment: {
       title: 'БІЗДІҢ ТЕХНИКА',
       cta: 'БАҒАСЫН БІЛУ',
+    },
+    benefits: {
+      title: 'НЕГЕ БІЗДІ ТАҢДАЙДЫ',
+    },
+    process: {
+      title: 'БІЗ ҚАЛАЙ ЖҰМЫС ІСТЕЙМІЗ',
     },
   },
 } as const;

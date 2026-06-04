@@ -4,6 +4,8 @@ import { Header } from './sections/Header';
 import { Hero } from './sections/Hero';
 import { CoverageMap } from './sections/CoverageMap';
 import { EquipmentCatalog } from './sections/EquipmentCatalog';
+import { WhyChooseUs } from './sections/WhyChooseUs';
+import { HowWeWork } from './sections/HowWeWork';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('ru');
@@ -15,6 +17,8 @@ export default function App() {
         <Hero language={language} />
         <CoverageMap language={language} />
         <EquipmentCatalog language={language} />
+        <WhyChooseUs language={language} />
+        <HowWeWork language={language} />
       </main>
     </div>
   );
