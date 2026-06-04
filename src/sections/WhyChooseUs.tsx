@@ -31,19 +31,19 @@ export function WhyChooseUs({ language }: WhyChooseUsProps) {
           {content.title}
         </h2>
 
-        <div className="mt-10 grid gap-y-8 sm:grid-cols-2 lg:mt-12 lg:grid-cols-6 lg:gap-y-0 lg:divide-x lg:divide-brand-yellow/40">
+        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 lg:mt-12 lg:grid-cols-6 lg:gap-y-0 lg:divide-x lg:divide-brand-yellow/40">
           {benefitItems.map((item) => {
             const iconSrc = benefitIcons[item.id];
 
             return (
-              <article key={item.id} className="flex flex-col items-center px-2 text-center lg:px-4">
+              <article key={item.id} className="flex min-w-0 flex-col items-center px-1 text-center sm:px-2 lg:px-4">
                 <img
                   src={iconSrc}
                   alt=""
                   aria-hidden="true"
-                  className="h-24 w-24 object-contain scale-[1.55] md:h-28 md:w-28 md:scale-[1.65]"
+                  className="h-20 w-20 object-contain scale-[1.35] sm:h-24 sm:w-24 sm:scale-[1.55] md:h-28 md:w-28 md:scale-[1.65]"
                 />
-                <p className="mt-4 max-w-[12rem] text-base font-semibold leading-6 text-white/92 md:text-lg">
+                <p className="mt-4 max-w-[11rem] text-sm font-semibold leading-5 text-white/92 sm:max-w-[12rem] sm:text-base sm:leading-6 md:text-lg">
                   {language === 'ru' ? item.ruLabel : item.kzLabel}
                 </p>
               </article>
