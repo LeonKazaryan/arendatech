@@ -6,6 +6,7 @@ import { CoverageMap } from './sections/CoverageMap';
 import { EquipmentCatalog } from './sections/EquipmentCatalog';
 import { WhyChooseUs } from './sections/WhyChooseUs';
 import { HowWeWork } from './sections/HowWeWork';
+import { Footer } from './sections/Footer';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('ru');
@@ -19,6 +20,7 @@ export default function App() {
         <EquipmentCatalog language={language} />
         <WhyChooseUs language={language} />
         <HowWeWork language={language} />
+        <Footer language={language} />
       </main>
     </div>
   );

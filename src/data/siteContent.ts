@@ -35,10 +35,24 @@ export const translations = {
     process: {
       title: 'КАК МЫ РАБОТАЕМ',
     },
+    footer: {
+      title: 'НУЖНА ТЕХНИКА?',
+      subtitle: 'СВЯЖИТЕСЬ С НАМИ ПРЯМО СЕЙЧАС',
+      whatsapp: 'WHATSAPP',
+      call: 'ПОЗВОНИТЬ',
+      address: 'Казахстан, г. Астана',
+      street: 'ул. Бекетая 5/1',
+      email: 'youremail@gmail.com',
+      phone1: '+7 (700) 000-00-00',
+      phone2: '+7 (707) 000-00-00',
+      logoSubtitle: 'АРЕНДА И УСЛУГИ',
+      pdf: 'СКАЧАТЬ ПРАЙС',
+      copyright: '© 2026 Спецтехника',
+    },
   },
   kz: {
     header: {
-      logoTitle: 'АРНАУЛЫ ТЕХНИКА',
+      logoTitle: 'СПЕЦТЕХНИКА',
       logoSubtitle: 'ЖАЛҒА БЕРУ ЖӘНЕ ҚЫЗМЕТ',
       whatsapp: 'WHATSAPP',
       call: 'ҚОҢЫРАУ ШАЛУ',
@@ -67,6 +81,20 @@ export const translations = {
     },
     process: {
       title: 'БІЗ ҚАЛАЙ ЖҰМЫС ІСТЕЙМІЗ',
+    },
+    footer: {
+      title: 'ТЕХНИКА ҚАЖЕТ ПЕ?',
+      subtitle: 'БІЗБЕН ДӘЛ ҚАЗІР ХАБАРЛАСЫҢЫЗ',
+      whatsapp: 'WHATSAPP',
+      call: 'ҚОҢЫРАУ ШАЛУ',
+      address: 'Қазақстан, Астана қаласы',
+      street: 'Бекетая көшесі, 5/1',
+      email: 'youremail@gmail.com',
+      phone1: '+7 (700) 000-00-00',
+      phone2: '+7 (707) 000-00-00',
+      logoSubtitle: 'ЖАЛҒА БЕРУ ЖӘНЕ ҚЫЗМЕТ',
+      pdf: 'ПРАЙС ЖҮКТЕУ',
+      copyright: '© 2026 Спецтехника',
     },
   },
 } as const;
