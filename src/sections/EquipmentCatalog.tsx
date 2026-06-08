@@ -11,6 +11,7 @@ export function EquipmentCatalog({ language }: EquipmentCatalogProps) {
   const content = translations[language].equipment;
   const topRow = equipmentItems.slice(0, 4);
   const bottomRow = equipmentItems.slice(4);
+  const getPriceLabel = (item: (typeof equipmentItems)[number]) => (language === 'ru' ? item.ruPrice : item.kzPrice);
 
   return (
     <section className="bg-brand.gray py-14 md:py-20">
@@ -25,7 +26,7 @@ export function EquipmentCatalog({ language }: EquipmentCatalogProps) {
               key={item.id}
               image={item.image}
               title={language === 'ru' ? item.ruTitle : item.kzTitle}
-              ctaLabel={content.cta}
+              priceLabel={getPriceLabel(item)}
             />
           ))}
         </div>
@@ -36,7 +37,7 @@ export function EquipmentCatalog({ language }: EquipmentCatalogProps) {
               key={item.id}
               image={item.image}
               title={language === 'ru' ? item.ruTitle : item.kzTitle}
-              ctaLabel={content.cta}
+              priceLabel={getPriceLabel(item)}
             />
           ))}
         </div>

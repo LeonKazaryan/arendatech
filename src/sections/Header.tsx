@@ -1,5 +1,6 @@
 import { Phone } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
+import { contactData } from '../data/contactData';
 import type { Language } from '../data/siteContent';
 import { translations } from '../data/siteContent';
 import { ActionButton } from '../components/ActionButton';
@@ -36,6 +37,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             icon={<FaWhatsapp className="h-5 w-5 text-white sm:h-4 sm:w-4" />}
             label={content.whatsapp}
             tone="success"
+            href={contactData.whatsappHref}
             className="h-[3.25rem] w-[3.25rem] gap-0 px-0 text-[12px] sm:h-14 sm:min-w-[140px] sm:w-auto sm:gap-3 sm:px-5 sm:text-[15px]"
             labelClassName="sr-only sm:not-sr-only"
           />
@@ -43,6 +45,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             icon={<Phone size={22} strokeWidth={2.4} className="text-brand.black sm:h-[18px] sm:w-[18px]" />}
             label={content.call}
             tone="warning"
+            href={contactData.callHref}
             className="h-[3.25rem] w-[3.25rem] gap-0 px-0 text-[12px] sm:h-14 sm:min-w-[140px] sm:w-auto sm:gap-3 sm:px-5 sm:text-[15px]"
             labelClassName="sr-only sm:not-sr-only"
           />

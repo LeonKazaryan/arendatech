@@ -1,6 +1,7 @@
 import { CheckCircle2, Phone } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import bannerImage from '../assets/images/banner.jpeg';
+import { contactData } from '../data/contactData';
 import type { Language } from '../data/siteContent';
 import { translations } from '../data/siteContent';
 import { ActionButton } from '../components/ActionButton';
@@ -45,8 +46,8 @@ export function Hero({ language }: HeroProps) {
           </p>
 
           <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
-            <ActionButton icon={<FaWhatsapp className="h-4 w-4 text-white" />} label={content.whatsapp} tone="success" className="h-14 sm:min-w-[180px]" />
-            <ActionButton icon={<Phone size={18} strokeWidth={2.4} className="text-brand.black" />} label={content.call} tone="warning" className="h-14 sm:min-w-[180px]" />
+            <ActionButton icon={<FaWhatsapp className="h-4 w-4 text-white" />} label={content.whatsapp} tone="success" href={contactData.whatsappHref} className="h-14 sm:min-w-[180px]" />
+            <ActionButton icon={<Phone size={18} strokeWidth={2.4} className="text-brand.black" />} label={content.call} tone="warning" href={contactData.callHref} className="h-14 sm:min-w-[180px]" />
           </div>
 
           <ul className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3">

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Download, Mail, MapPin, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { ActionButton } from "../components/ActionButton";
+import { contactData } from "../data/contactData";
 import type { Language } from "../data/siteContent";
 import { translations } from "../data/siteContent";
 
@@ -47,6 +48,7 @@ export function Footer({ language }: FooterProps) {
                 icon={<FaWhatsapp className="h-4 w-4 text-white" />}
                 label={content.whatsapp}
                 tone="success"
+                href={contactData.whatsappHref}
                 className="h-11 px-4 text-[12px] sm:h-12 sm:min-w-[170px] sm:px-5 sm:text-[13px]"
                 labelClassName="text-[12px] sm:text-[13px]"
               />
@@ -61,6 +63,7 @@ export function Footer({ language }: FooterProps) {
                 }
                 label={content.call}
                 tone="warning"
+                href={contactData.callHref}
                 className="h-11 px-4 text-[12px] sm:h-12 sm:min-w-[170px] sm:px-5 sm:text-[13px]"
                 labelClassName="text-[12px] sm:text-[13px]"
               />
@@ -98,9 +101,9 @@ export function Footer({ language }: FooterProps) {
               }
               label={
                 <>
-                  <span>{content.phone1}</span>
+                  <span>{contactData.callPhoneDisplay}</span>
                   <br />
-                  <span>{content.phone2}</span>
+                  <span>{contactData.whatsappPhoneDisplay}</span>
                 </>
               }
             />

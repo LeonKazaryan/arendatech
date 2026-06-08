@@ -1,13 +1,10 @@
-import { FaWhatsapp } from "react-icons/fa6";
-import { ActionButton } from "./ActionButton";
-
 type EquipmentCardProps = {
   image: string;
   title: string;
-  ctaLabel: string;
+  priceLabel: string;
 };
 
-export function EquipmentCard({ image, title, ctaLabel }: EquipmentCardProps) {
+export function EquipmentCard({ image, title, priceLabel }: EquipmentCardProps) {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-[22px] bg-white shadow-[0_10px_24px_rgba(17,17,17,0.08)] ring-1 ring-black/5 transition-transform duration-200 hover:-translate-y-1">
       <div className="aspect-[1.45/1] overflow-hidden bg-brand.gray">
@@ -25,12 +22,9 @@ export function EquipmentCard({ image, title, ctaLabel }: EquipmentCardProps) {
           {title}
         </h3>
         <div className="mt-4 flex flex-1 justify-center">
-          <ActionButton
-            icon={<FaWhatsapp className="h-4 w-4 text-[#111111]" />}
-            label={ctaLabel}
-            tone="warning"
-            className="h-11 w-full max-w-[255px] rounded-lg px-4 text-[12px] sm:h-12 sm:text-[13px]"
-          />
+          <div className="flex min-h-11 w-full max-w-[255px] items-center justify-center rounded-lg bg-brand-yellow px-4 py-3 text-center text-[12px] font-extrabold uppercase tracking-[0.08em] text-brand.black sm:min-h-12 sm:text-[13px]">
+            {priceLabel}
+          </div>
         </div>
       </div>
     </article>
