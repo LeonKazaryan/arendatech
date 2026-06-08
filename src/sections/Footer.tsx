@@ -1,18 +1,30 @@
 import type { ReactNode } from "react";
-import { Download, Mail, MapPin, Phone } from "lucide-react";
+import { Download, MapPin, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { ActionButton } from "../components/ActionButton";
 import { contactData } from "../data/contactData";
 import type { Language } from "../data/siteContent";
 import { translations } from "../data/siteContent";
 
-function ContactItem({ icon, label }: { icon: ReactNode; label: ReactNode }) {
+function ContactItem({
+  icon,
+  label,
+  className = "",
+  labelClassName = "",
+}: {
+  icon: ReactNode;
+  label: ReactNode;
+  className?: string;
+  labelClassName?: string;
+}) {
   return (
-    <div className="flex items-start gap-4">
+    <div className={`flex items-start gap-4 ${className}`}>
       <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[16px] border border-white/10 bg-white/3 text-brand.yellow shadow-[0_2px_0_rgba(0,0,0,0.12)]">
         {icon}
       </div>
-      <p className="max-w-[18rem] text-[15px] font-bold leading-6 text-white/92 sm:text-[16px]">
+      <p
+        className={`max-w-[18rem] text-[15px] font-bold leading-6 text-white/92 sm:text-[16px] ${labelClassName}`}
+      >
         {label}
       </p>
     </div>
@@ -70,7 +82,7 @@ export function Footer({ language }: FooterProps) {
             </div>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:pt-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-[auto_auto] lg:justify-between lg:pt-2">
             <ContactItem
               icon={
                 <MapPin
@@ -87,12 +99,8 @@ export function Footer({ language }: FooterProps) {
               }
             />
             <ContactItem
-              icon={
-                <Mail className="h-6 w-6 text-brand.yellow" strokeWidth={2.4} />
-              }
-              label={content.email}
-            />
-            <ContactItem
+              className="lg:justify-self-end"
+              labelClassName="lg:text-right"
               icon={
                 <Phone
                   className="h-6 w-6 text-brand.yellow"
