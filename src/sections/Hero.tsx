@@ -19,12 +19,12 @@ export function Hero({ language }: HeroProps) {
         <img
           src={bannerImage}
           alt="Дорожная спецтехника на объекте"
-          className="h-full w-full object-cover object-right md:object-center"
+          className="h-full w-full object-cover object-right brightness-125 saturate-125 contrast-110 md:object-center md:brightness-110 md:saturate-110 md:contrast-105"
           loading="eager"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 via-42% to-white/18 lg:via-white/75 lg:to-white/10" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.22))]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/10 via-35% to-transparent md:from-white/90 md:via-white/70 md:via-40% md:to-white/8 lg:from-white/82 lg:via-white/48 lg:to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.04))] md:bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.1))]" />
       </div>
 
       <div className="relative mx-auto flex min-h-[calc(100vh-88px)] max-w-[1280px] items-center px-4 py-10 md:px-6 md:py-14 lg:px-8 lg:py-20">
