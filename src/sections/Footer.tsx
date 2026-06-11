@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Download, MapPin, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
+import commercialProposalPdf from "../assets/Коммерческое предложение ИП ARMAN.pdf";
 import { ActionButton } from "../components/ActionButton";
 import { contactData } from "../data/contactData";
 import type { Language } from "../data/siteContent";
@@ -137,13 +138,14 @@ export function Footer({ language }: FooterProps) {
               </div>
             </div>
 
-            <button
-              type="button"
+            <a
+              href={commercialProposalPdf}
+              download="Коммерческое предложение ИП ARMAN.pdf"
               className="inline-flex min-h-[56px] items-center justify-center gap-4 rounded-[16px] border border-white/12 bg-white/5 px-6 text-[15px] font-bold uppercase tracking-[0.06em] text-white transition-colors duration-200 hover:bg-white/10"
             >
               <Download className="h-5 w-5" />
               <span>{content.pdf}</span>
-            </button>
+            </a>
 
             <div className="flex items-center justify-start gap-4 lg:justify-end">
               <p className="text-[14px] font-semibold text-white/72">
