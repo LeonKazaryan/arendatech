@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Download, MapPin, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 import commercialProposalPdf from "../assets/Коммерческое предложение ИП ARMAN.pdf";
+import contractTemplatePdf from "../assets/Шаблон договора аренды спецтехники ИП ARMAN.pdf";
 import { ActionButton } from "../components/ActionButton";
 import { contactData } from "../data/contactData";
 import type { Language } from "../data/siteContent";
@@ -120,7 +121,7 @@ export function Footer({ language }: FooterProps) {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6">
-          <div className="grid gap-5 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+          <div className="grid gap-5 lg:grid-cols-[1fr_minmax(0,40rem)_1fr] lg:items-center">
             <div className="flex items-center gap-4">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[18px] bg-brand.yellow text-brand.black shadow-[0_2px_0_rgba(0,0,0,0.12)]">
                 <span className="text-[24px] font-black leading-none">S</span>
@@ -138,14 +139,25 @@ export function Footer({ language }: FooterProps) {
               </div>
             </div>
 
-            <a
-              href={commercialProposalPdf}
-              download="Коммерческое предложение ИП ARMAN.pdf"
-              className="inline-flex min-h-[56px] items-center justify-center gap-4 rounded-[16px] border border-white/12 bg-white/5 px-6 text-[15px] font-bold uppercase tracking-[0.06em] text-white transition-colors duration-200 hover:bg-white/10"
-            >
-              <Download className="h-5 w-5" />
-              <span>{content.pdf}</span>
-            </a>
+            <div className="grid gap-3 sm:grid-cols-2 lg:justify-self-center lg:w-full">
+              <a
+                href={commercialProposalPdf}
+                download="Коммерческое предложение ИП ARMAN.pdf"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/12 bg-white/5 px-4 py-3 text-center text-[13px] font-bold uppercase leading-tight tracking-[0.05em] text-white transition-colors duration-200 hover:bg-white/10 sm:px-5"
+              >
+                <Download className="h-5 w-5 shrink-0" />
+                <span>{content.pdf}</span>
+              </a>
+
+              <a
+                href={contractTemplatePdf}
+                download="Шаблон договора аренды спецтехники ИП ARMAN.pdf"
+                className="inline-flex min-h-[56px] w-full items-center justify-center gap-3 rounded-[16px] border border-white/12 bg-white/5 px-4 py-3 text-center text-[13px] font-bold uppercase leading-tight tracking-[0.05em] text-white transition-colors duration-200 hover:bg-white/10 sm:px-5"
+              >
+                <Download className="h-5 w-5 shrink-0" />
+                <span>{content.contractTemplate}</span>
+              </a>
+            </div>
 
             <div className="flex items-center justify-start gap-4 lg:justify-end">
               <p className="text-[14px] font-semibold text-white/72">
